@@ -20,6 +20,9 @@ const handleNovoItem = (event) => {
     const tarefaCriada = criarTarefa(dados);
 
     listaDeTarefas.appendChild(tarefaCriada);
+
+    sessionStorage.setItem("tarefas", JSON.stringify(dados));
+
     input.value = '';
 }
 
