@@ -1,10 +1,16 @@
 const novaTarefa = document.querySelector('[data-form-button]');
-const tarefa = document.querySelector('[data-form-input]');
 
-novaTarefa.addEventListener('click', (event) => {
+const criarTarefa = (event) => {
+    
     event.preventDefault();
-    console.log(tarefa.value);
-})
+    const input = document.querySelector('[data-form-input]');
+    const valor = input.value;
+    console.log(valor);
+    input.value = "";
+}
+
+
+novaTarefa.addEventListener('click', criarTarefa);
 
 
 
