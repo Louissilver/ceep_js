@@ -29,8 +29,15 @@ const BotaoConcluir = () => {
     botaoConcluir.innerHTML = 'Concluir';
     botaoConcluir.addEventListener('click', (event) => {
         event.preventDefault();
-        console.log('fui clicado');
+        concluirTarefa(event);
     })
     return botaoConcluir;
+}
+
+const concluirTarefa = (event) => {
+    const botaoConcluir = event.target;
+
+    const tarefaCompleta = botaoConcluir.parentElement;
+    tarefaCompleta.classList.toggle('done');
 }
 
